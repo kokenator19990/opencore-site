@@ -812,68 +812,17 @@ ul { list-style: none; }
 }
 
 /* ============================================
-   FOOTER - Premium
+   FOOTER - Simple
    ============================================ */
 .footer {
   background: linear-gradient(135deg, var(--c-gray-900) 0%, #0a0f1a 100%);
-  padding: 60px var(--gutter) 40px;
-  border-top: 4px solid var(--c-primary);
-}
-
-.footer-content {
-  max-width: 1200px;
-  margin: 0 auto;
+  padding: 32px var(--gutter);
   text-align: center;
 }
 
-.footer-brand {
-  margin-bottom: 24px;
-}
-
-.footer-logo {
-  font-size: 1.75rem;
-  font-weight: 800;
-  color: white;
-  letter-spacing: -0.02em;
-}
-
-.footer-tagline {
-  font-size: 0.95rem;
-  color: rgba(255, 255, 255, 0.6);
-  margin-top: 8px;
-}
-
-.footer-links {
-  display: flex;
-  justify-content: center;
-  gap: 32px;
-  margin-bottom: 32px;
-}
-
-.footer-links a {
-  color: rgba(255, 255, 255, 0.8);
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-.footer-links a:hover {
-  color: white;
-}
-
 .footer-text {
-  color: rgba(255, 255, 255, 0.4);
-  font-size: 0.85rem;
-}
-
-@media (max-width: 600px) {
-  .footer {
-    padding: 40px var(--gutter) 32px;
-  }
-  
-  .footer-links {
-    flex-direction: column;
-    gap: 16px;
-  }
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
 }
 
 /* ============================================
