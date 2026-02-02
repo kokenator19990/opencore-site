@@ -144,21 +144,23 @@ ul { list-style: none; }
 }
 
 .logo-icon {
-  font-size: 1.8rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  background: linear-gradient(135deg, var(--c-primary) 0%, var(--c-primary-light) 100%);
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(30, 95, 173, 0.25);
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.85);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  background: rgba(30, 95, 173, 0.12);
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid rgba(30, 95, 173, 0.15);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   transition: all 0.3s var(--ease-out);
 }
 
 .logo-icon:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 20px rgba(30, 95, 173, 0.35);
+  background: rgba(30, 95, 173, 0.18);
+  border-color: rgba(30, 95, 173, 0.25);
 }
 
 /* Nav Toggle (Mobile) */
