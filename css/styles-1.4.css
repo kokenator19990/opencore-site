@@ -299,7 +299,12 @@ ul { list-style: none; }
    MAIN / SECTIONS
    ============================================ */
 .main {
-  padding-top: var(--navbar-h);
+  padding-top: calc(var(--navbar-h) * 0.3);
+}
+
+/* Primera sección hero - reducir espacio superior */
+.section--hero {
+  margin-top: 0;
 }
 
 .section {
@@ -920,5 +925,6 @@ ul { list-style: none; }
     transform: translateY(0);
   }
 }
-   
+  
+ 
  
