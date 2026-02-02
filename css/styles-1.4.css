@@ -143,14 +143,22 @@ ul { list-style: none; }
   z-index: 1001;
 }
 
-.logo-text {
-  font-size: 1.5rem;
-  font-weight: 800;
+.logo-icon {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
   background: linear-gradient(135deg, var(--c-primary) 0%, var(--c-primary-light) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  letter-spacing: -0.02em;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(30, 95, 173, 0.25);
+  transition: all 0.3s var(--ease-out);
+}
+
+.logo-icon:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(30, 95, 173, 0.35);
 }
 
 /* Nav Toggle (Mobile) */
