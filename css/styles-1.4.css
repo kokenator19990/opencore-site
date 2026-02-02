@@ -243,7 +243,19 @@ ul { list-style: none; }
 }
 
 /* Mobile Nav */
-@media (max-width: 900px) {
+@media (max-width: 768px) {
+  /* Hide navbar completely on mobile */
+  .navbar {
+    display: none !important;
+  }
+  
+  /* Adjust main content since no navbar */
+  .main {
+    padding-top: 0;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 900px) {
   .nav-toggle { display: flex; }
   
   .nav-menu {
