@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="theme-color" content="#1E5FAD">
+  <meta name="description" content="OpenCORE - Más de 20 años liderando soluciones tecnológicas y automatización empresarial">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <title>OpenCORE - Líderes en Transformación Digital</title>
+  <link rel="stylesheet" href="css/styles-1.6.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Loading Screen with Progress -->
+  <div class="loader" id="loader">
+    <div class="loader-content">
+      <div class="loader-logo">
+        <div class="logo-pulse"></div>
+      </div>
+      <div class="loader-bar">
+        <div class="loader-progress" id="loaderProgress"></div>
+      </div>
+      <p class="loader-text">Cargando experiencia...</p>
+    </div>
+  </div>
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Particles Background -->
+  <div class="particles" id="particles"></div>
+
+  <!-- Navbar with Glassmorphism -->
+  <header class="navbar" id="navbar">
+    <nav class="navbar-inner">
+      <div class="navbar-logo">
+        <span class="logo-text">OpenCORE</span>
+        <span class="logo-badge">20+ años</span>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Menú" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <div class="nav-menu" id="navMenu">
+        <a href="#hero" class="nav-link" data-section="hero">Inicio</a>
+        <a href="#why-us" class="nav-link" data-section="why-us">¿Por Qué Nosotros?</a>
+        <a href="#about" class="nav-link" data-section="about">Quiénes Somos</a>
+        <a href="#services" class="nav-link" data-section="services">Servicios</a>
+        <a href="#commitment" class="nav-link" data-section="commitment">Compromiso</a>
+        <a href="#clients" class="nav-link" data-section="clients">Clientes</a>
+        <a href="#contact" class="nav-link nav-link--cta" data-section="contact">Contacto</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section - Dynamic Banner -->
+  <section id="hero" class="section section--hero">
+    <div class="hero-bg">
+      <div class="hero-gradient"></div>
+      <div class="hero-pattern"></div>
+    </div>
+    
+    <div class="hero-container">
+      <div class="hero-content reveal-up">
+        <div class="hero-badge animate-float">
+          <span class="badge-dot"></span>
+          <span class="badge-text">Transformación Digital Integral</span>
+        </div>
+        
+        <h1 class="hero-title">
+          <span class="title-line">Innovación que</span>
+          <span class="title-line gradient-text">impulsa tu empresa</span>
+        </h1>
+        
+        <p class="hero-description">
+          Con más de 20 años de experiencia, transformamos operaciones empresariales 
+          mediante soluciones tecnológicas inteligentes, automatización y estrategias 
+          de IA aplicadas a resultados concretos.
+        </p>
+        
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn--primary magnetic">
+            <span class="btn-text">Agenda una reunión</span>
+            <span class="btn-icon">→</span>
+            <span class="btn-shine"></span>
+          </a>
+          <a href="#why-us" class="btn btn--secondary">
+            <span class="btn-text">Conoce nuestra experiencia</span>
+            <span class="btn-icon">↓</span>
+          </a>
+        </div>
+        
+        <!-- Trust Indicators -->
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number counter" data-target="20">0</span>
+            <span class="stat-plus">+</span>
+            <span class="stat-label">Años de experiencia</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number counter" data-target="500">0</span>
+            <span class="stat-plus">+</span>
+            <span class="stat-label">Proyectos exitosos</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number counter" data-target="98">0</span>
+            <span class="stat-plus">%</span>
+            <span class="stat-label">Satisfacción cliente</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="hero-visual reveal-right">
+        <div class="visual-card card-1">
+          <div class="card-icon">🚀</div>
+          <div class="card-text">Automatización</div>
+        </div>
+        <div class="visual-card card-2">
+          <div class="card-icon">🤖</div>
+          <div class="card-text">IA Aplicada</div>
+        </div>
+        <div class="visual-card card-3">
+          <div class="card-icon">⚡</div>
+          <div class="card-text">Integración</div>
+        </div>
+        <div class="visual-glow"></div>
+      </div>
+    </div>
+    
+    <div class="hero-scroll">
+      <span class="scroll-text">Descubre más</span>
+      <div class="scroll-icon">
+        <div class="scroll-wheel"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Us Section - NEW -->
+  <section id="why-us" class="section section--why-us">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-badge">Nuestra Diferencia</span>
+        <h2 class="section-title">¿Por qué elegirnos?</h2>
+        <p class="section-description">
+          Más de dos décadas de excelencia nos respaldan
+        </p>
+      </div>
+      
+      <div class="why-grid">
+        <!-- Main Feature Card -->
+        <div class="why-card why-card--main reveal-up">
+          <div class="card-background">
+            <div class="card-gradient"></div>
+          </div>
+          <div class="card-content">
+            <div class="card-icon-large">🏆</div>
+            <h3 class="card-title">+20 Años de Trayectoria</h3>
+            <p class="card-description">
+              Desde el año 2005, hemos sido pioneros en transformación digital, 
+              acompañando a empresas líderes en su evolución tecnológica. 
+              Nuestra experiencia nos permite anticipar desafíos y ofrecer 
+              soluciones probadas que realmente funcionan.
+            </p>
+            <div class="card-metrics">
+              <div class="metric">
+                <span class="metric-value">2005</span>
+                <span class="metric-label">Año de fundación</span>
+              </div>
+              <div class="metric">
+                <span class="metric-value">500+</span>
+                <span class="metric-label">Clientes atendidos</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Feature Cards -->
+        <div class="why-card reveal-up delay-1">
+          <div class="card-icon">💡</div>
+          <h3 class="card-title">Experiencia Comprobada</h3>
+          <p class="card-text">
+            Hemos enfrentado y resuelto los desafíos tecnológicos más complejos 
+            del mercado. Cada proyecto suma a nuestra expertise.
+          </p>
+        </div>
+        
+        <div class="why-card reveal-up delay-2">
+          <div class="card-icon">🎯</div>
+          <h3 class="card-title">Resultados Medibles</h3>
+          <p class="card-text">
+            No prometemos, entregamos. Cada solución está orientada a 
+            KPIs concretos y mejoras tangibles en tu operación.
+          </p>
+        </div>
+        
+        <div class="why-card reveal-up delay-3">
+          <div class="card-icon">🔧</div>
+          <h3 class="card-title">Tecnología de Vanguardia</h3>
+          <p class="card-text">
+            Nos mantenemos a la vanguardia: IA, automatización, integración 
+            de sistemas y las últimas tendencias aplicadas a tu negocio.
+          </p>
+        </div>
+        
+        <div class="why-card reveal-up delay-4">
+          <div class="card-icon">🤝</div>
+          <h3 class="card-title">Compromiso a Largo Plazo</h3>
+          <p class="card-text">
+            No solo implementamos y nos vamos. Te acompañamos en todo 
+            el proceso y más allá, asegurando tu éxito continuo.
+          </p>
+        </div>
+        
+        <div class="why-card reveal-up delay-5">
+          <div class="card-icon">👥</div>
+          <h3 class="card-title">Equipo Experto</h3>
+          <p class="card-text">
+            Contamos con profesionales senior con años de experiencia 
+            en diversas industrias y tecnologías.
+          </p>
+        </div>
+        
+        <div class="why-card reveal-up delay-6">
+          <div class="card-icon">🚀</div>
+          <h3 class="card-title">Innovación Continua</h3>
+          <p class="card-text">
+            Nunca dejamos de evolucionar. Investigamos, experimentamos 
+            e incorporamos las mejores prácticas del mercado.
+          </p>
+        </div>
+      </div>
+      
+      <!-- Timeline -->
+      <div class="timeline reveal-up">
+        <h3 class="timeline-title">Nuestra Historia</h3>
+        <div class="timeline-track">
+          <div class="timeline-item">
+            <div class="timeline-year">2005</div>
+            <div class="timeline-content">
+              <h4>Nuestros Inicios</h4>
+              <p>Fundación de OpenCORE con visión de transformar empresas</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2010</div>
+            <div class="timeline-content">
+              <h4>Expansión Regional</h4>
+              <p>Presencia en 5 países de Latinoamérica</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2015</div>
+            <div class="timeline-content">
+              <h4>Era Digital</h4>
+              <p>Pioneros en automatización e integración cloud</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2020</div>
+            <div class="timeline-content">
+              <h4>IA & Machine Learning</h4>
+              <p>Incorporamos IA aplicada a procesos empresariales</p>
+            </div>
+          </div>
+          <div class="timeline-item timeline-item--current">
+            <div class="timeline-year">2026</div>
+            <div class="timeline-content">
+              <h4>Líderes en Transformación</h4>
+              <p>Referentes en soluciones tecnológicas integrales</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section section--about">
+    <div class="container-full">
+      <picture class="reveal-scale">
+        <source media="(max-width: 768px)" srcset="Opencore mobile/2.png">
+        <img src="Opencore web/2.png" alt="Quiénes Somos" class="section-image hover-lift" loading="lazy">
+      </picture>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="section section--services">
+    <div class="container-full">
+      <picture class="reveal-scale">
+        <source media="(max-width: 768px)" srcset="Opencore mobile/3.png">
+        <img src="Opencore web/3.png" alt="Servicios" class="section-image hover-lift" loading="lazy">
+      </picture>
+    </div>
+  </section>
+
+  <!-- Commitment Section -->
+  <section id="commitment" class="section section--commitment">
+    <div class="container-full">
+      <picture class="reveal-scale">
+        <source media="(max-width: 768px)" srcset="Opencore mobile/4.png">
+        <img src="Opencore web/4.png" alt="Compromiso" class="section-image hover-lift" loading="lazy">
+      </picture>
+    </div>
+  </section>
+
+  <!-- Methodology Section -->
+  <section id="methodology" class="section section--methodology">
+    <div class="container-full">
+      <picture class="reveal-scale">
+        <source media="(max-width: 768px)" srcset="Opencore mobile/5.png">
+        <img src="Opencore web/5.png" alt="Metodología" class="section-image hover-lift" loading="lazy">
+      </picture>
+    </div>
+  </section>
+
+  <!-- Clients Section -->
+  <section id="clients" class="section section--clients">
+    <div class="container-full">
+      <picture class="reveal-scale">
+        <source media="(max-width: 768px)" srcset="Opencore mobile/6.png">
+        <img src="Opencore web/6.png" alt="Clientes" class="section-image hover-lift" loading="lazy">
+      </picture>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section section--contact">
+    <div class="contact-container">
+      <!-- Left Column: Info -->
+      <div class="contact-info reveal-left">
+        <div class="contact-badge float-animation">
+          <span class="badge-icon">💬</span>
+          <span class="badge-text">Hablemos</span>
+        </div>
+        <h2 class="contact-title gradient-text">Conversemos sobre tu proyecto</h2>
+        <p class="contact-question">¿Tienes un desafío operativo, tecnológico o de automatización?</p>
+        <p class="contact-desc">
+          En OpenCORE analizamos tu contexto y te proponemos un camino claro, viable y orientado a resultados. 
+          Con más de 20 años de experiencia, trabajamos con empresas que buscan ordenar su operación, 
+          integrar sistemas y aplicar tecnología e IA de forma concreta, sin complejidad innecesaria.
+        </p>
+        
+        <div class="contact-features">
+          <div class="feature-item">
+            <span class="feature-icon">✓</span>
+            <span class="feature-text">Respuesta en menos de 24 horas</span>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">✓</span>
+            <span class="feature-text">Primera consultoría sin costo</span>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">✓</span>
+            <span class="feature-text">Soluciones personalizadas</span>
+          </div>
+        </div>
+        
+        <div class="contact-details">
+          <a href="mailto:ventas@opencore.cl" class="contact-link contact-email hover-slide">
+            <span class="link-icon">✉️</span>
+            <span class="link-text">
+              <span class="link-label">Email</span>
+              <span class="link-value">ventas@opencore.cl</span>
+            </span>
+          </a>
+          <a href="tel:+56949587198" class="contact-link contact-phone hover-slide">
+            <span class="link-icon">📞</span>
+            <span class="link-text">
+              <span class="link-label">Teléfono</span>
+              <span class="link-value">+56 9 4958 7198</span>
+            </span>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Right Column: Form -->
+      <div class="contact-form-wrapper glass-card reveal-right">
+        <div class="form-header">
+          <h3 class="form-title">Envíanos un mensaje</h3>
+          <p class="form-subtitle">Nos pondremos en contacto a la brevedad</p>
+        </div>
+        <form class="contact-form" id="contactForm" action="mailto:ventas@opencore.cl" method="POST" enctype="text/plain" novalidate>
+          <div class="form-row">
+            <div class="form-group input-focus-effect">
+              <label for="firstName">Nombre *</label>
+              <input type="text" name="firstName" id="firstName" placeholder="Tu nombre" required>
+              <span class="input-border"></span>
+            </div>
+            <div class="form-group input-focus-effect">
+              <label for="lastName">Apellido</label>
+              <input type="text" name="lastName" id="lastName" placeholder="Tu apellido">
+              <span class="input-border"></span>
+            </div>
+          </div>
+          <div class="form-group input-focus-effect">
+            <label for="email">Email *</label>
+            <input type="email" name="email" id="email" placeholder="tu@email.com" required>
+            <span class="input-border"></span>
+          </div>
+          <div class="form-group input-focus-effect">
+            <label for="company">Empresa</label>
+            <input type="text" name="company" id="company" placeholder="Nombre de tu empresa">
+            <span class="input-border"></span>
+          </div>
+          <div class="form-row">
+            <div class="form-group form-group--code input-focus-effect">
+              <label for="countryCode">Código</label>
+              <select name="countryCode" id="countryCode" required>
+                <option value="+56">🇨🇱 +56</option>
+                <option value="+1">🇺🇸 +1</option>
+                <option value="+52">🇲🇽 +52</option>
+                <option value="+54">🇦🇷 +54</option>
+                <option value="+55">🇧🇷 +55</option>
+                <option value="+57">🇨🇴 +57</option>
+                <option value="+51">🇵🇪 +51</option>
+                <option value="+34">🇪🇸 +34</option>
+              </select>
+              <span class="input-border"></span>
+            </div>
+            <div class="form-group form-group--phone input-focus-effect">
+              <label for="phone">Teléfono</label>
+              <input type="tel" name="phone" id="phone" placeholder="9 1234 5678">
+              <span class="input-border"></span>
+            </div>
+          </div>
+          <div class="form-group input-focus-effect">
+            <label for="comment">Mensaje *</label>
+            <textarea name="comment" id="comment" placeholder="Cuéntanos sobre tu proyecto o desafío..." rows="5" required></textarea>
+            <span class="input-border"></span>
+          </div>
+          <button type="submit" class="contact-submit ripple-btn magnetic">
+            <span class="submit-text">Enviar mensaje</span>
+            <span class="submit-icon">→</span>
+            <span class="btn-shine"></span>
+          </button>
+          <p class="form-privacy">🔒 Tu información está segura y no será compartida</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer reveal-up">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <h3 class="footer-logo">OpenCORE</h3>
+        <p class="footer-tagline">Transformando empresas desde 2005</p>
+        <div class="footer-social">
+          <a href="#" class="social-link" aria-label="LinkedIn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4 class="footer-col-title">Empresa</h4>
+          <a href="#about" class="footer-link">Quiénes Somos</a>
+          <a href="#why-us" class="footer-link">Por Qué Nosotros</a>
+          <a href="#clients" class="footer-link">Clientes</a>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Servicios</h4>
+          <a href="#services" class="footer-link">Automatización</a>
+          <a href="#services" class="footer-link">IA Aplicada</a>
+          <a href="#services" class="footer-link">Integración</a>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Contacto</h4>
+          <a href="mailto:ventas@opencore.cl" class="footer-link">ventas@opencore.cl</a>
+          <a href="tel:+56949587198" class="footer-link">+56 9 4958 7198</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p class="footer-text">© 2005-2026 OpenCORE Software. Todos los derechos reservados.</p>
+      <p class="footer-text footer-text--small">+20 años de excelencia en transformación digital</p>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">
+    <span class="toast-icon">✓</span>
+    <span class="toast-text">Mensaje enviado correctamente</span>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Volver arriba">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- Enhanced JavaScript -->
+  <script src="js/main-1.6.js"></script>
+</body>
+</html>
