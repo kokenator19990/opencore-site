@@ -164,7 +164,7 @@
     }
 
     if (!countryCode || !countryCode.value) {
-      if (countryCode) countryCode.classList.add('error');
+      if (countryCode) countryCode.add('error');
       valid = false;
     }
 
@@ -176,37 +176,47 @@
     return valid;
   }
 
-  if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-      e.preventDefault();
-
-      if (validateForm()) {
-        // Build mailto body
-        var firstName = document.getElementById('firstName').value;
-        var email = document.getElementById('email').value;
-        var countryCode = document.getElementById('countryCode').value;
-        var phone = document.getElementById('phone').value || '';
-        var comment = document.getElementById('comment').value;
-
-        var subject = encodeURIComponent('Contacto desde web - ' + firstName);
-        var body = encodeURIComponent(
-          'Nombre: ' + firstName + '\n' +
-          'Email: ' + email + '\n' +
-          'Teléfono: ' + countryCode + ' ' + phone + '\n\n' +
-          'Mensaje:\n' + comment
-        );
-
-        // Open mailto
-        window.location.href = 'mailto:ventas@opencore.cl?subject=' + subject + '&body=' + body;
-
-        // Show toast and reset
-        showToast();
-        contactForm.reset();
+  // Character counter for message
+  var commentField = document.getElementById('comment');
+  var charCount = document.getElementById('charCount');
+  if (commentField && charCount) {
+    commentField.addEventListener('input', function() {
+      var len = this.value.length;
+      charCount.textContent = '(' + len + '/600)';
+      if (len >= 600) {
+        charCount.style.color = '#e74c3c';
+      } else if (len >= 500) {
+        charCount.style.color = '#f39c12';
       } else {
-        var firstErr = contactForm.querySelector('.error');
-        if (firstErr) firstErr.focus();
+        charCount.style.color = '';
       }
     });
+  }
+
+  if (contactForm) {
+    // Set _next to current page for redirect after submit
+    var nextField = contactForm.querySelector('input[name="_next"]');
+    if (nextField) {
+      nextField.value = window.location.href.split('?')[0] + '?sent=1';
+    }
+
+    contactForm.addEventListener('submit', function(e) {
+      if (!validateForm()) {
+        e.preventDefault();
+        var firstErr = contactForm.querySelector('.error');
+        if (firstErr) firstErr.focus();
+        return false;
+      }
+      // Form is valid - let it submit naturally to Formsubmit
+      return true;
+    });
+
+    // Show toast if redirected back after successful submit
+    if (window.location.search.includes('sent=1')) {
+      showToast();
+      // Clean URL
+      window.history.replaceState({}, document.title, window.location.pathname);
+    }
 
     // Clear error on input
     contactForm.querySelectorAll('input, select, textarea').forEach(function(el) {
