@@ -1,0 +1,215 @@
+═══════════════════════════════════════════════════════════════════
+     GUÍA PASO A PASO - SUBIR SITIO OPENCORE A CPANEL
+═══════════════════════════════════════════════════════════════════
+
+ANTES DE EMPEZAR
+────────────────
+Esta carpeta "sitio opencore" contiene todo lo necesario:
+  ├── index.html          (página principal)
+  ├── css/
+  │   └── styles.css      (estilos)
+  ├── js/
+  │   └── main.js         (funcionalidades)
+  ├── Opencore web/       (imágenes desktop)
+  └── Opencore mobile/    (imágenes móvil)
+
+
+═══════════════════════════════════════════════════════════════════
+PASO 1: INGRESAR A CPANEL
+═══════════════════════════════════════════════════════════════════
+
+1. Abre tu navegador y ve a:
+   http://www.opencore.cl/cpanel/
+
+2. Ingresa tus credenciales:
+   Usuario: opencore
+   Contraseña: [tu contraseña]
+
+3. Haz clic en "Iniciar sesión"
+
+
+═══════════════════════════════════════════════════════════════════
+PASO 2: RESPALDAR EL SITIO ACTUAL (MUY IMPORTANTE)
+═══════════════════════════════════════════════════════════════════
+
+1. En cPanel, busca y haz clic en "Administrador de archivos" 
+   (File Manager)
+
+2. Navega a la carpeta "public_html" (haz doble clic)
+
+3. Para respaldar TODO el sitio actual:
+   a) Selecciona TODOS los archivos (Ctrl+A o checkbox arriba)
+   b) Haz clic derecho → "Comprimir" (Compress)
+   c) Elige formato ZIP
+   d) Nombre: "backup_sitio_anterior_2026-02-04.zip"
+   e) Haz clic en "Compress File(s)"
+
+4. DESCARGA el backup:
+   a) Selecciona el archivo .zip creado
+   b) Haz clic en "Descargar" en la barra superior
+   c) Guárdalo en tu computadora en lugar seguro
+
+
+═══════════════════════════════════════════════════════════════════
+PASO 3: LIMPIAR LA CARPETA PUBLIC_HTML
+═══════════════════════════════════════════════════════════════════
+
+1. Dentro de public_html, selecciona TODOS los archivos
+   EXCEPTO:
+   - .htaccess (archivo oculto importante)
+   - El backup .zip que acabas de crear
+   - Carpetas de correo si las hay
+
+2. Haz clic derecho → "Eliminar" (Delete)
+   ⚠️ Marca la opción "Skip the trash" para eliminar definitivamente
+
+3. Confirma la eliminación
+
+
+═══════════════════════════════════════════════════════════════════
+PASO 4: SUBIR EL NUEVO SITIO
+═══════════════════════════════════════════════════════════════════
+
+OPCIÓN A - Subir como ZIP (RECOMENDADO - MÁS RÁPIDO):
+
+1. En tu computadora, comprime la carpeta "sitio opencore":
+   - Clic derecho en la carpeta → "Comprimir a archivo ZIP"
+   - O selecciona TODO el contenido DENTRO de la carpeta y comprime
+
+2. En cPanel File Manager, dentro de public_html:
+   a) Haz clic en "Cargar" (Upload) en la barra superior
+   b) Arrastra el archivo .zip o haz clic para seleccionarlo
+   c) Espera a que suba (100%)
+   d) Cierra la ventana de carga
+
+3. Descomprimir:
+   a) Selecciona el archivo .zip subido
+   b) Haz clic derecho → "Extraer" (Extract)
+   c) Destino: /public_html
+   d) Haz clic en "Extract File(s)"
+
+4. Si los archivos quedaron en una subcarpeta:
+   a) Entra a la subcarpeta
+   b) Selecciona TODO (Ctrl+A)
+   c) Haz clic derecho → "Mover" (Move)
+   d) Destino: /public_html
+   e) Confirma
+
+5. Elimina el archivo .zip y carpeta vacía si quedó
+
+
+OPCIÓN B - Subir archivos manualmente:
+
+1. En cPanel File Manager, dentro de public_html:
+   a) Haz clic en "Cargar" (Upload)
+   b) Arrastra el archivo index.html
+
+2. Crear carpeta css:
+   a) Haz clic en "+ Carpeta" (New Folder)
+   b) Nombre: css
+   c) Entra a la carpeta css
+   d) Sube styles.css
+
+3. Crear carpeta js:
+   a) Vuelve a public_html
+   b) Haz clic en "+ Carpeta"
+   c) Nombre: js
+   d) Entra y sube main.js
+
+4. Subir carpetas de imágenes:
+   a) Vuelve a public_html
+   b) Crea carpeta "Opencore web"
+   c) Entra y sube todas las imágenes (1.png a 6.png)
+   d) Vuelve y crea "Opencore mobile"
+   e) Sube todas las imágenes móviles (1.png a 8.png)
+
+
+═══════════════════════════════════════════════════════════════════
+PASO 5: VERIFICAR QUE TODO FUNCIONA
+═══════════════════════════════════════════════════════════════════
+
+1. Abre una nueva pestaña del navegador
+
+2. Ve a: http://www.opencore.cl
+
+3. Verifica:
+   ✓ La página carga correctamente
+   ✓ Las imágenes se ven bien
+   ✓ El formulario de contacto aparece
+   ✓ Los botones funcionan
+   ✓ El footer nuevo se ve bien
+   ✓ Prueba en móvil también
+
+4. Si algo no funciona:
+   - Limpia caché del navegador (Ctrl+Shift+Delete)
+   - Verifica que los archivos estén en las carpetas correctas
+   - Revisa que los nombres coincidan exactamente
+
+
+═══════════════════════════════════════════════════════════════════
+PASO 6: ACTIVAR EL FORMULARIO (PRIMERA VEZ)
+═══════════════════════════════════════════════════════════════════
+
+La primera vez que alguien envíe el formulario:
+
+1. Formsubmit enviará un email de confirmación a:
+   contacto@opencore.cl
+
+2. Abre ese email y haz clic en el enlace de confirmación
+
+3. A partir de ahí, todos los mensajes llegarán automáticamente
+
+
+═══════════════════════════════════════════════════════════════════
+ESTRUCTURA FINAL EN PUBLIC_HTML
+═══════════════════════════════════════════════════════════════════
+
+public_html/
+  ├── index.html
+  ├── css/
+  │   └── styles.css
+  ├── js/
+  │   └── main.js
+  ├── Opencore web/
+  │   ├── 1.png
+  │   ├── 2.png
+  │   ├── 3.png
+  │   ├── 4.png
+  │   ├── 5.png
+  │   └── 6.png
+  ├── Opencore mobile/
+  │   ├── 1.png
+  │   ├── 2.png
+  │   ├── 3.png
+  │   ├── 4.png
+  │   ├── 5.png
+  │   ├── 6.png
+  │   ├── 7.png
+  │   └── 8.png
+  └── .htaccess (no tocar)
+
+
+═══════════════════════════════════════════════════════════════════
+SOLUCIÓN DE PROBLEMAS COMUNES
+═══════════════════════════════════════════════════════════════════
+
+❌ "Las imágenes no cargan"
+   → Verifica que las carpetas se llamen exactamente:
+     "Opencore web" y "Opencore mobile" (con espacio)
+
+❌ "Los estilos no se aplican"
+   → Verifica que css/styles.css exista
+   → Limpia caché del navegador
+
+❌ "Error 404"
+   → El archivo index.html debe estar directamente en public_html
+   → No dentro de otra subcarpeta
+
+❌ "El formulario no envía"
+   → Espera la confirmación de Formsubmit
+   → Revisa la carpeta spam de tu correo
+
+
+═══════════════════════════════════════════════════════════════════
+¡LISTO! Tu sitio OpenCORE v1.8 está en línea 🚀
+═══════════════════════════════════════════════════════════════════
