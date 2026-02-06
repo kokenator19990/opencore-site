@@ -1,147 +1,119 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="OpenCORE">
-  <title>OpenCORE</title>
-  <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenCORE 2.0 - Soluciones Tecnológicas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/css/style.css">
 </head>
 <body>
-  <!-- Navbar -->
-  <header class="navbar" id="navbar">
-    <nav class="navbar-inner">
-      <button class="nav-toggle" id="navToggle" aria-label="Menú" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      
-      <div class="nav-menu" id="navMenu">
-        <a href="#s1" class="nav-link" data-section="s1">Inicio</a>
-        <a href="#s2" class="nav-link" data-section="s2">Quiénes Somos</a>
-        <a href="#s3" class="nav-link" data-section="s3">Servicios</a>
-        <a href="#s4" class="nav-link" data-section="s4">Compromiso</a>
-        <a href="#s6" class="nav-link" data-section="s6">Clientes</a>
-        <a href="#s7" class="nav-link" data-section="s7">CTA</a>
-        <a href="#s8" class="nav-link" data-section="s8">Contacto</a>
-      </div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="logo">OPENCORE</div>
+        <div class="nav-links">
+            <a href="#hero">Inicio</a>
+            <a href="#about">Servicios</a>
+            <a href="#commitment">Compromiso</a>
+            <a href="#contact">Contacto</a>
+        </div>
+        <!-- Mobile Menu Toggle Logic needed here if full implementation -->
     </nav>
-  </header>
 
-  <!-- Slides -->
-  <main class="main">
-    <section id="s1" class="section section--hero">
-      <div class="slide-wrapper">
+    <!-- Slide 1: Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-bg-wrapper">
+            <picture>
+                <source media="(max-width: 768px)" srcset="/src/assets/opencore-mobile/1.png">
+                <img src="/src/assets/opencore-web/1.png" alt="Opencore Hero" class="hero-bg" id="hero-img">
+            </picture>
+        </div>
+        <div class="hero-content fade-in">
+            <!-- Content overlay if needed, currently just button on top of image based on old design -->
+            <a href="#contact" class="cta-button">Agenda una reunión</a>
+        </div>
+    </section>
+
+    <!-- Slides 2-7: Content Sections -->
+    <section id="about" class="content-section">
         <picture>
-          <source media="(max-width: 768px)" srcset="Opencore mobile/1.png">
-          <img src="Opencore web/1.png" alt="Slide 1" class="slide-img">
+            <source media="(max-width: 768px)" srcset="/src/assets/opencore-mobile/2.png">
+            <img src="/src/assets/opencore-web/2.png" alt="Sobre Nosotros" class="content-img">
         </picture>
-        <div class="hero-cta">
-          <a href="#s8" class="hero-cta__btn" aria-label="Agenda una reunión">Agenda una reunión</a>
+    </section>
+
+    <section class="content-section">
+        <picture>
+            <source media="(max-width: 768px)" srcset="/src/assets/opencore-mobile/3.png">
+            <img src="/src/assets/opencore-web/3.png" alt="Servicios" class="content-img">
+        </picture>
+    </section>
+
+     <section class="content-section">
+        <picture>
+            <source media="(max-width: 768px)" srcset="/src/assets/opencore-mobile/4.png">
+            <img src="/src/assets/opencore-web/4.png" alt="Slide 4" class="content-img">
+        </picture>
+    </section>
+
+    <section id="commitment" class="content-section">
+        <picture>
+            <source media="(max-width: 768px)" srcset="/src/assets/opencore-mobile/5.png">
+            <img src="/src/assets/opencore-web/5.png" alt="Compromiso" class="content-img">
+        </picture>
+    </section>
+
+    <section class="content-section">
+        <picture>
+            <source media="(max-width: 768px)" srcset="/src/assets/opencore-mobile/6.png">
+            <img src="/src/assets/opencore-web/6.png" alt="Clientes" class="content-img">
+        </picture>
+    </section>
+
+    <section class="content-section">
+        <picture>
+            <source media="(max-width: 768px)" srcset="/src/assets/opencore-mobile/7.png">
+            <img src="/src/assets/opencore-web/7.png" alt="CTA" class="content-img">
+        </picture>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Conversemos</h2>
+                <p>¿Tienes un desafío operativo, tecnológico o de automatización?</p>
+                <p>En OpenCore analizamos tu contexto y te proponemos un camino claro.</p>
+                <br>
+                <p><strong>ventas@opencore.cl</strong></p>
+                <p>+56 9 4958 7198</p>
+            </div>
+            
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label>Nombre</label>
+                    <input type="text" class="form-control" name="name" required placeholder="Tu nombre">
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" class="form-control" name="email" required placeholder="tu@email.com">
+                </div>
+                <div class="form-group">
+                    <label>Teléfono</label>
+                    <input type="tel" class="form-control" name="phone" placeholder="+56 9...">
+                </div>
+                <div class="form-group">
+                    <label>Mensaje</label>
+                    <textarea class="form-control" name="message" rows="4" required placeholder="Cuéntanos tu proyecto..."></textarea>
+                </div>
+                <button type="submit" class="submit-btn" id="submitBtn">Enviar Mensaje</button>
+            </form>
         </div>
-      </div>
     </section>
 
-    <section id="s2" class="section">
-      <picture>
-        <source media="(max-width: 768px)" srcset="Opencore mobile/2.png">
-        <img src="Opencore web/2.png" alt="Slide 2" class="slide-img">
-      </picture>
-    </section>
-
-    <section id="s3" class="section">
-      <picture>
-        <source media="(max-width: 768px)" srcset="Opencore mobile/3.png">
-        <img src="Opencore web/3.png" alt="Slide 3" class="slide-img">
-      </picture>
-    </section>
-
-    <section id="s4" class="section">
-      <picture>
-        <source media="(max-width: 768px)" srcset="Opencore mobile/4.png">
-        <img src="Opencore web/4.png" alt="Slide 4" class="slide-img">
-      </picture>
-    </section>
-
-    <section id="s5" class="section">
-      <picture>
-        <source media="(max-width: 768px)" srcset="Opencore mobile/5.png">
-        <img src="Opencore web/5.png" alt="Slide 5" class="slide-img">
-      </picture>
-    </section>
-
-    <section id="s6" class="section">
-      <picture>
-        <source media="(max-width: 768px)" srcset="Opencore mobile/6.png">
-        <img src="Opencore web/6.png" alt="Slide 6" class="slide-img">
-      </picture>
-    </section>
-
-    <section id="s7" class="section">
-      <picture>
-        <source media="(max-width: 768px)" srcset="Opencore mobile/7.png">
-        <img src="Opencore web/7.png" alt="Slide 7" class="slide-img">
-      </picture>
-    </section>
-
-    <section id="s8" class="section section--contact-real">
-      <div class="contact-container">
-        <!-- Columna izquierda: Texto -->
-        <div class="contact-info">
-          <h2 class="contact-title">Conversemos</h2>
-          <p class="contact-question">¿Tienes un desafío operativo, tecnológico o de automatización?</p>
-          <p class="contact-desc">En OpenCore analizamos tu contexto y te proponemos un camino claro, viable y orientado a resultados. Trabajamos con empresas que buscan ordenar su operación, integrar sistemas y aplicar tecnología e IA de forma concreta, sin complejidad innecesaria.</p>
-          <div class="contact-details">
-            <a href="mailto:ventas@opencore.cl" class="contact-email">ventas@opencore.cl</a>
-            <a href="tel:+56949587198" class="contact-phone">+56949587198</a>
-          </div>
-        </div>
-        
-        <!-- Columna derecha: Formulario -->
-        <div class="contact-form-wrapper">
-          <form class="contact-form" id="contactForm" action="mailto:ventas@opencore.cl" method="POST" enctype="text/plain" novalidate>
-            <div class="form-group">
-              <label for="firstName">First Name</label>
-              <input type="text" name="firstName" id="firstName" placeholder="First Name" required>
-            </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" name="email" id="email" placeholder="Email address" required>
-            </div>
-            <div class="form-group-row">
-              <div class="form-group form-group--code">
-                <label for="countryCode">Country Code</label>
-                <select name="countryCode" id="countryCode" required>
-                  <option value="+56">+56 Chile</option>
-                  <option value="+1">+1 United States</option>
-                  <option value="+52">+52 Mexico</option>
-                  <option value="+54">+54 Argentina</option>
-                  <option value="+55">+55 Brasil</option>
-                  <option value="+57">+57 Colombia</option>
-                  <option value="+51">+51 Perú</option>
-                  <option value="+34">+34 España</option>
-                </select>
-              </div>
-              <div class="form-group form-group--phone">
-                <label for="phone">Phone Number</label>
-                <input type="tel" name="phone" id="phone" placeholder="Phone Number">
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="comment">Comment</label>
-              <textarea name="comment" id="comment" placeholder="Comment" rows="4" required></textarea>
-            </div>
-            <button type="submit" class="contact-submit">Enviar</button>
-          </form>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Toast -->
-  <div class="toast" id="toast">Mensaje enviado correctamente</div>
-
-  <script src="js/main.js"></script>
+    <script type="module" src="/src/js/main.js"></script>
 </body>
 </html>
