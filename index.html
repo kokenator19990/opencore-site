@@ -12,18 +12,25 @@
     <link rel="stylesheet" href="src/css/style.css">
 </head>
 
-<body>
+<body class="loading">
+
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Cursor Glow -->
+    <div class="cursor-glow" id="cursorGlow"></div>
 
     <!-- Navbar -->
     <nav class="navbar" id="navbar">
         <div class="logo">OPENCORE</div>
         <div class="nav-links">
             <a href="#hero">Inicio</a>
-            <a href="#about">Servicios</a>
-            <a href="#commitment">Compromiso</a>
+            <a href="#about">Quiénes Somos</a>
+            <a href="#services">Servicios</a>
             <a href="#contact">Contacto</a>
         </div>
-        <!-- Mobile Menu Toggle Logic needed here if full implementation -->
     </nav>
 
     <!-- Slide 1: Hero Section -->
@@ -35,7 +42,6 @@
             </picture>
         </div>
         <div class="hero-content fade-in">
-            <!-- Content overlay if needed, currently just button on top of image based on old design -->
             <a href="#contact" class="cta-button">Agenda una reunión</a>
         </div>
     </section>
@@ -48,7 +54,7 @@
         </picture>
     </section>
 
-    <section class="content-section">
+    <section id="services" class="content-section">
         <picture>
             <source media="(max-width: 768px)" srcset="src/assets/opencore-mobile/3.png">
             <img src="src/assets/opencore-web/3.png" alt="Servicios" class="content-img">
@@ -58,14 +64,14 @@
     <section class="content-section">
         <picture>
             <source media="(max-width: 768px)" srcset="src/assets/opencore-mobile/4.png">
-            <img src="src/assets/opencore-web/4.png" alt="Slide 4" class="content-img">
+            <img src="src/assets/opencore-web/4.png" alt="Compromiso" class="content-img">
         </picture>
     </section>
 
-    <section id="commitment" class="content-section">
+    <section class="content-section">
         <picture>
             <source media="(max-width: 768px)" srcset="src/assets/opencore-mobile/5.png">
-            <img src="src/assets/opencore-web/5.png" alt="Compromiso" class="content-img">
+            <img src="src/assets/opencore-web/5.png" alt="Metodologia" class="content-img">
         </picture>
     </section>
 
@@ -89,9 +95,10 @@
             <div class="contact-info">
                 <h2>Conversemos</h2>
                 <p>¿Tienes un desafío operativo, tecnológico o de automatización?</p>
-                <p>En OpenCore analizamos tu contexto y te proponemos un camino claro.</p>
+                <p>En OpenCore analizamos tu contexto y te proponemos un camino claro, viable y orientado a resultados.
+                </p>
                 <br>
-                <p><strong>ventas@opencore.cl</strong></p>
+                <p><strong>contacto@opencore.cl</strong></p>
                 <p>+56 9 4958 7198</p>
             </div>
 
@@ -111,12 +118,34 @@
                 <div class="form-group">
                     <label>Mensaje</label>
                     <textarea class="form-control" name="message" rows="4" required
-                        placeholder="Cuéntanos tu proyecto..."></textarea>
+                        placeholder="Cuéntanos sobre tu proyecto..."></textarea>
                 </div>
                 <button type="submit" class="submit-btn" id="submitBtn">Enviar Mensaje</button>
             </form>
         </div>
     </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h3>OPENCORE</h3>
+                <p>Consultora especializada en automatización empresarial, integración de sistemas e inteligencia
+                    artificial aplicada. Acompañamos a organizaciones que buscan transformar su operación con tecnología
+                    de forma clara y efectiva.</p>
+                <br>
+                <p>Santiago, Chile.</p>
+            </div>
+            <div class="footer-social">
+                <a href="https://instagram.com/opencore.cl" target="_blank">Instagram</a>
+                <a href="https://linkedin.com/company/opencore-cl" target="_blank">LinkedIn</a>
+                <a href="https://wa.me/56949587198" target="_blank">WhatsApp</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 OpenCore. Todos los derechos reservados.</p>
+        </div>
+    </footer>
 
     <script type="module" src="src/js/main.js"></script>
 </body>
