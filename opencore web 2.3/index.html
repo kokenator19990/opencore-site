@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="theme-color" content="#1E5FAD">
+  <meta name="description" content="OpenCORE - Soluciones tecnológicas y automatización empresarial">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <title>OpenCORE</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div class="loader" id="loader">
+    <div class="loader-content">
+      <div class="loader-spinner"></div>
+    </div>
+  </div>
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Cursor Glow Effect (Desktop only) -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- Navbar -->
+  <header class="navbar" id="navbar">
+    <nav class="navbar-inner">
+      <div class="navbar-logo">
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Menú" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <div class="nav-menu" id="navMenu">
+        <a href="#s1" class="nav-link" data-section="s1">Inicio</a>
+        <a href="#s2" class="nav-link" data-section="s2">Quiénes Somos</a>
+        <a href="#s3" class="nav-link" data-section="s3">Servicios</a>
+        <a href="#s4" class="nav-link" data-section="s4">Compromiso</a>
+        <a href="#s6" class="nav-link" data-section="s6">Clientes</a>
+        <a href="#contact" class="nav-link nav-link--cta" data-section="contact">Contacto</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ============================================
+       DESKTOP/TABLET VERSION - Shows opencore-web/
+       ============================================ -->
+  <main class="main desktop-content">
+    <section id="s1" class="section section--hero reveal">
+      <div class="slide-wrapper">
+        <picture>
+          <source media="(max-width: 768px)" srcset="opencore-mobile/1.png">
+          <img src="opencore-web/1.png" alt="OpenCORE - Inicio" class="slide-img parallax-img" loading="eager">
+        </picture>
+        <div class="hero-cta">
+          <a href="#contact" class="hero-cta__btn magnetic" aria-label="Agenda una reunión">
+            <span class="btn-icon">📅</span>
+            Agenda una reunión
+            <span class="btn-shine"></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="s2" class="section reveal-left">
+      <picture>
+        <source media="(max-width: 768px)" srcset="opencore-mobile/2.png">
+        <img src="opencore-web/2.png" alt="Quiénes Somos" class="slide-img hover-lift" loading="lazy">
+      </picture>
+    </section>
+
+    <section id="s3" class="section reveal-right">
+      <picture>
+        <source media="(max-width: 768px)" srcset="opencore-mobile/3.png">
+        <img src="opencore-web/3.png" alt="Servicios" class="slide-img hover-lift" loading="lazy">
+      </picture>
+    </section>
+
+    <section id="s4" class="section reveal-zoom">
+      <picture>
+        <source media="(max-width: 768px)" srcset="opencore-mobile/4.png">
+        <img src="opencore-web/4.png" alt="Compromiso" class="slide-img hover-lift" loading="lazy">
+      </picture>
+    </section>
+
+    <section id="s5" class="section reveal-clip">
+      <picture>
+        <source media="(max-width: 768px)" srcset="opencore-mobile/5.png">
+        <img src="opencore-web/5.png" alt="Metodología" class="slide-img hover-lift" loading="lazy">
+      </picture>
+    </section>
+
+    <section id="s6" class="section reveal-rotate">
+      <picture>
+        <source media="(max-width: 768px)" srcset="opencore-mobile/6.png">
+        <img src="opencore-web/6.png" alt="Clientes" class="slide-img hover-lift" loading="lazy">
+      </picture>
+    </section>
+  </main>
+
+  <!-- ============================================
+       MOBILE VERSION - Shows opencore-mobile/
+       ============================================ -->
+  <main class="main mobile-content">
+    <section id="m1" class="section section--mobile-hero reveal-mobile">
+      <div class="slide-wrapper">
+        <img src="opencore-mobile/1.png" alt="OpenCORE - Inicio" class="slide-img" loading="eager">
+        <div class="hero-cta hero-cta--mobile">
+          <a href="#contact" class="hero-cta__btn" aria-label="Agenda una reunión">
+            <span class="btn-icon">📅</span>
+            Agenda una reunión
+            <span class="btn-shine"></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="m2" class="section section--mobile reveal-mobile-left">
+      <img src="opencore-mobile/2.png" alt="Slide 2" class="slide-img" loading="lazy">
+    </section>
+
+    <section id="m3" class="section section--mobile reveal-mobile-right">
+      <img src="opencore-mobile/3.png" alt="Slide 3" class="slide-img" loading="lazy">
+    </section>
+
+    <section id="m4" class="section section--mobile reveal-mobile-zoom">
+      <img src="opencore-mobile/4.png" alt="Slide 4" class="slide-img" loading="lazy">
+    </section>
+
+    <section id="m5" class="section section--mobile reveal-mobile-left">
+      <img src="opencore-mobile/5.png" alt="Slide 5" class="slide-img" loading="lazy">
+    </section>
+
+    <section id="m6" class="section section--mobile reveal-mobile-right">
+      <img src="opencore-mobile/6.png" alt="Slide 6" class="slide-img" loading="lazy">
+    </section>
+
+    <section id="m7" class="section section--mobile reveal-mobile-zoom">
+      <img src="opencore-mobile/7.png" alt="Slide 7" class="slide-img" loading="lazy">
+    </section>
+
+    <section id="m8" class="section section--mobile reveal-mobile-left">
+      <img src="opencore-mobile/8.png" alt="Slide 8" class="slide-img" loading="lazy">
+    </section>
+  </main>
+
+  <!-- ============================================
+       CONTACT SECTION - Shared for both versions
+       ============================================ -->
+  <section id="contact" class="section section--contact reveal">
+    <div class="contact-container">
+      <!-- Left Column: Info -->
+      <div class="contact-info stagger-children">
+        <div class="contact-badge float-animation">
+          <span class="badge-icon">💬</span>
+          <span class="badge-text">Hablemos</span>
+        </div>
+        <h2 class="contact-title gradient-text">Conversemos</h2>
+        <p class="contact-question">¿Tienes un desafío operativo, tecnológico o de automatización?</p>
+        <p class="contact-desc">En OpenCore analizamos tu contexto y te proponemos un camino claro, viable y orientado a resultados. Trabajamos con empresas que buscan ordenar su operación, integrar sistemas y aplicar tecnología e IA de forma concreta, sin complejidad innecesaria.</p>
+        <div class="contact-details">
+          <a href="mailto:contacto@opencore.cl" class="contact-link contact-email hover-slide">
+            <span class="link-icon">✉️</span>
+            contacto@opencore.cl
+          </a>
+          <a href="tel:+56949587198" class="contact-link contact-phone hover-slide">
+            <span class="link-icon">📞</span>
+            +56 9 4958 7198
+          </a>
+        </div>
+      </div>
+      
+      <!-- Right Column: Form -->
+      <div class="contact-form-wrapper glass-card">
+        <div class="form-header">
+          <h3 class="form-title">Envíanos un mensaje</h3>
+          <p class="form-subtitle">Te responderemos en menos de 24 horas</p>
+        </div>
+        <form class="contact-form" id="contactForm" action="https://formsubmit.co/contacto@opencore.cl" method="POST" novalidate>
+          <!-- Formsubmit config -->
+          <input type="hidden" name="_subject" value="Nuevo contacto desde OpenCORE web">
+          <input type="hidden" name="_next" value="">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="text" name="_honey" style="display:none">
+          
+          <div class="form-row">
+            <div class="form-group input-focus-effect">
+              <label for="firstName">Nombre</label>
+              <input type="text" name="firstName" id="firstName" placeholder="Tu nombre" required>
+            </div>
+            <div class="form-group input-focus-effect">
+              <label for="lastName">Apellido</label>
+              <input type="text" name="lastName" id="lastName" placeholder="Tu apellido">
+            </div>
+          </div>
+          <div class="form-group input-focus-effect">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="tu@email.com" required>
+          </div>
+          <div class="form-group input-focus-effect">
+            <label for="company">Empresa</label>
+            <input type="text" name="company" id="company" placeholder="Nombre de tu empresa">
+          </div>
+          <div class="form-row">
+            <div class="form-group form-group--code input-focus-effect">
+              <label for="countryCode">Código</label>
+              <select name="countryCode" id="countryCode" required>
+                <option value="+56">🇨🇱 +56</option>
+                <option value="+1">🇺🇸 +1</option>
+                <option value="+52">🇲🇽 +52</option>
+                <option value="+54">🇦🇷 +54</option>
+                <option value="+55">🇧🇷 +55</option>
+                <option value="+57">🇨🇴 +57</option>
+                <option value="+51">🇵🇪 +51</option>
+                <option value="+34">🇪🇸 +34</option>
+              </select>
+            </div>
+            <div class="form-group form-group--phone input-focus-effect">
+              <label for="phone">Teléfono</label>
+              <input type="tel" name="phone" id="phone" placeholder="9 1234 5678">
+            </div>
+          </div>
+          <div class="form-group input-focus-effect">
+            <label for="comment">Mensaje <span class="char-count" id="charCount">(0/600)</span></label>
+            <textarea name="comment" id="comment" placeholder="Cuéntanos sobre tu proyecto o desafío..." rows="4" maxlength="600" required></textarea>
+          </div>
+          <button type="submit" class="contact-submit ripple-btn">
+            <span class="submit-text">Enviar mensaje</span>
+            <span class="submit-icon">→</span>
+          </button>
+          <p class="form-privacy">🔒 Tu información está segura y no será compartida</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer reveal">
+    <div class="footer-container">
+      <!-- Left Column: Brand Info -->
+      <div class="footer-brand">
+        <h3 class="footer-logo">OpenCore</h3>
+        <p class="footer-description">
+          Consultora especializada en automatización empresarial, integración de sistemas e inteligencia artificial aplicada. Acompañamos a organizaciones que buscan transformar su operación con tecnología de forma clara y efectiva.
+        </p>
+        <div class="footer-contact-info">
+          <a href="mailto:contacto@opencore.cl" class="footer-contact-link">contacto@opencore.cl</a>
+          <span class="footer-address">Santiago, Chile.</span>
+        </div>
+      </div>
+      
+      <!-- Right Column: Social Icons -->
+      <div class="footer-social">
+        <a href="https://instagram.com/opencore.cl" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Instagram">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+        </a>
+        <a href="https://linkedin.com/company/opencore-cl" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+            <rect x="2" y="9" width="4" height="12"></rect>
+            <circle cx="4" cy="4" r="2"></circle>
+          </svg>
+        </a>
+        <a href="https://wa.me/56949587198" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="WhatsApp">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+    
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <div class="footer-legal">
+        <a href="legal.html#privacidad" class="footer-legal-link">Política de Privacidad</a>
+        <span class="footer-legal-separator">|</span>
+        <a href="legal.html#terminos" class="footer-legal-link">Términos y Condiciones</a>
+        <span class="footer-legal-separator">|</span>
+        <a href="legal.html#cookies" class="footer-legal-link">Política de Cookies</a>
+        <span class="footer-legal-separator">|</span>
+        <a href="legal.html#aviso-legal" class="footer-legal-link">Aviso Legal</a>
+      </div>
+      <p class="footer-copyright">© 2026 OpenCore. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">
+    <span class="toast-icon">✓</span>
+    <span class="toast-text">Mensaje enviado correctamente</span>
+  </div>
+
+  <!-- Enhanced JavaScript v2.3 -->
+  <script src="js/main.js"></script>
+  <script>
+    // Loading Screen
+    window.addEventListener('load', () => {
+      const loader = document.getElementById('loader');
+      setTimeout(() => {
+        loader.classList.add('hidden');
+        document.body.classList.add('loaded');
+      }, 800);
+    });
+
+    // Scroll Progress Bar - throttled with RAF
+    (function() {
+      let ticking = false;
+      window.addEventListener('scroll', () => {
+        if (!ticking) {
+          requestAnimationFrame(() => {
+            const scrollProgress = document.getElementById('scrollProgress');
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            scrollProgress.style.width = ((scrollTop / docHeight) * 100) + '%';
+            ticking = false;
+          });
+          ticking = true;
+        }
+      }, { passive: true });
+    })();
+
+    // Scroll Reveal Animation - observes ALL reveal variants
+    const revealSelectors = '.reveal, .reveal-left, .reveal-right, .reveal-zoom, .reveal-clip, .reveal-rotate, .reveal-mobile, .reveal-mobile-left, .reveal-mobile-right, .reveal-mobile-zoom';
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+        }
+      });
+    }, {
+      threshold: 0.08,
+      rootMargin: '0px 0px -40px 0px'
+    });
+
+    document.querySelectorAll(revealSelectors).forEach(el => {
+      revealObserver.observe(el);
+    });
+
+    // Cursor Glow Effect (Desktop only)
+    if (window.innerWidth > 768) {
+      const cursorGlow = document.getElementById('cursorGlow');
+      let mouseX = 0, mouseY = 0;
+      let currentX = 0, currentY = 0;
+
+      document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+      });
+
+      function animateCursor() {
+        currentX += (mouseX - currentX) * 0.08;
+        currentY += (mouseY - currentY) * 0.08;
+        cursorGlow.style.left = currentX + 'px';
+        cursorGlow.style.top = currentY + 'px';
+        requestAnimationFrame(animateCursor);
+      }
+      animateCursor();
+    }
+
+    // Magnetic Button Effect - spring feel
+    document.querySelectorAll('.magnetic').forEach(btn => {
+      btn.addEventListener('mousemove', (e) => {
+        const rect = btn.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+        btn.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
+        btn.style.transition = 'transform 0.15s ease-out';
+      });
+
+      btn.addEventListener('mouseleave', () => {
+        btn.style.transform = 'translate(0, 0)';
+        btn.style.transition = 'transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)';
+      });
+    });
+
+    // Ripple Effect on Submit Button
+    document.querySelectorAll('.ripple-btn').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        const rect = this.getBoundingClientRect();
+        const ripple = document.createElement('span');
+        ripple.className = 'ripple';
+        ripple.style.left = (e.clientX - rect.left) + 'px';
+        ripple.style.top = (e.clientY - rect.top) + 'px';
+        this.appendChild(ripple);
+        setTimeout(() => ripple.remove(), 600);
+      });
+    });
+
+    // Parallax Effect on Hero Image
+    if (window.innerWidth > 768) {
+      let parallaxTicking = false;
+      window.addEventListener('scroll', () => {
+        if (!parallaxTicking) {
+          requestAnimationFrame(() => {
+            const scrolled = window.scrollY;
+            document.querySelectorAll('.parallax-img').forEach(img => {
+              const rate = scrolled * 0.04;
+              img.style.transform = `translateY(${rate}px) scale(${1 + scrolled * 0.00005})`;
+            });
+            parallaxTicking = false;
+          });
+          parallaxTicking = true;
+        }
+      }, { passive: true });
+    }
+
+    // Staggered Children Animation
+    document.querySelectorAll('.stagger-children').forEach(parent => {
+      const children = parent.children;
+      Array.from(children).forEach((child, index) => {
+        child.style.animationDelay = (index * 0.12) + 's';
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="theme-color" content="#1E5FAD">
+  <title>OpenCORE - Informacion Legal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --c-primary: #1E5FAD;
+      --c-primary-dark: #164785;
+      --c-primary-light: #3B82F6;
+      --c-accent: #7C5CE7;
+      --c-white: #ffffff;
+      --c-gray-50: #f9fafb;
+      --c-gray-100: #f3f4f6;
+      --c-gray-200: #e5e7eb;
+      --c-gray-500: #6b7280;
+      --c-gray-700: #374151;
+      --c-gray-900: #111827;
+    }
+
+    html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: var(--c-white);
+      color: var(--c-gray-700);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--c-primary); text-decoration: none; transition: color 0.3s ease; }
+    a:hover { color: var(--c-accent); }
+
+    /* Header */
+    .legal-header {
+      background: linear-gradient(135deg, var(--c-primary) 0%, var(--c-primary-dark) 100%);
+      padding: 40px 24px 48px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .legal-header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .legal-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: rgba(255,255,255,0.8);
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-bottom: 20px;
+      transition: color 0.3s ease;
+    }
+
+    .legal-back:hover { color: white; }
+
+    .legal-header h1 {
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      font-weight: 800;
+      color: white;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+    }
+
+    .legal-header p {
+      color: rgba(255,255,255,0.7);
+      font-size: 0.95rem;
+    }
+
+    /* Navigation tabs */
+    .legal-nav {
+      background: var(--c-white);
+      border-bottom: 1px solid var(--c-gray-200);
+      position: sticky;
+      top: 0;
+      z-index: 99;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .legal-nav-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      gap: 0;
+      padding: 0 24px;
+    }
+
+    .legal-nav a {
+      padding: 16px 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--c-gray-500);
+      white-space: nowrap;
+      border-bottom: 2px solid transparent;
+      transition: all 0.3s ease;
+    }
+
+    .legal-nav a:hover,
+    .legal-nav a.active {
+      color: var(--c-primary);
+      border-bottom-color: var(--c-primary);
+    }
+
+    /* Content */
+    .legal-content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+
+    .legal-section {
+      padding: 60px 0 40px;
+      border-bottom: 1px solid var(--c-gray-100);
+    }
+
+    .legal-section:last-child { border-bottom: none; }
+
+    .legal-section h2 {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--c-gray-900);
+      margin-bottom: 24px;
+      letter-spacing: -0.02em;
+    }
+
+    .legal-section h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--c-gray-900);
+      margin: 28px 0 12px;
+    }
+
+    .legal-section p {
+      margin-bottom: 16px;
+      font-size: 0.95rem;
+      color: var(--c-gray-700);
+    }
+
+    .legal-section ul {
+      list-style: none;
+      margin-bottom: 16px;
+      padding-left: 0;
+    }
+
+    .legal-section ul li {
+      position: relative;
+      padding-left: 24px;
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+    }
+
+    .legal-section ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 6px;
+      height: 6px;
+      background: var(--c-primary);
+      border-radius: 50%;
+    }
+
+    .legal-badge {
+      display: inline-block;
+      padding: 4px 12px;
+      background: rgba(30, 95, 173, 0.08);
+      color: var(--c-primary);
+      font-size: 0.75rem;
+      font-weight: 700;
+      border-radius: 50px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 16px;
+    }
+
+    /* Footer */
+    .legal-footer {
+      background: var(--c-gray-50);
+      border-top: 1px solid var(--c-gray-200);
+      padding: 32px 24px;
+      text-align: center;
+    }
+
+    .legal-footer p {
+      font-size: 0.85rem;
+      color: var(--c-gray-500);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .legal-header { padding: 28px 20px 36px; }
+      .legal-section { padding: 40px 0 28px; }
+      .legal-section h2 { font-size: 1.35rem; }
+      .legal-nav a { padding: 14px 16px; font-size: 0.8rem; }
+    }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: var(--c-gray-100); }
+    ::-webkit-scrollbar-thumb { background: linear-gradient(180deg, var(--c-primary), var(--c-accent)); border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="legal-header">
+    <div class="legal-header-inner">
+      <a href="index.html" class="legal-back">&larr; Volver a OpenCORE</a>
+      <h1>Informacion Legal</h1>
+      <p>Ultima actualizacion: Febrero 2026</p>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="legal-nav">
+    <div class="legal-nav-inner">
+      <a href="#privacidad" class="active">Privacidad</a>
+      <a href="#terminos">Terminos</a>
+      <a href="#cookies">Cookies</a>
+      <a href="#aviso-legal">Aviso Legal</a>
+    </div>
+  </nav>
+
+  <!-- Content -->
+  <div class="legal-content">
+
+    <!-- ============================== -->
+    <!-- POLITICA DE PRIVACIDAD         -->
+    <!-- ============================== -->
+    <section id="privacidad" class="legal-section">
+      <span class="legal-badge">Privacidad</span>
+      <h2>Politica de Privacidad</h2>
+
+      <p>En OpenCORE (en adelante, "la Empresa"), respetamos su privacidad y nos comprometemos a proteger los datos personales que usted nos proporcione a traves de nuestro sitio web. Esta politica describe como recopilamos, usamos, almacenamos y protegemos su informacion personal, en conformidad con la Ley N 19.628 sobre Proteccion de la Vida Privada de Chile y las mejores practicas internacionales.</p>
+
+      <h3>1. Responsable del tratamiento</h3>
+      <p>El responsable del tratamiento de sus datos personales es OpenCORE, con domicilio en Santiago, Chile. Para cualquier consulta relacionada con el tratamiento de sus datos, puede contactarnos en <a href="mailto:contacto@opencore.cl">contacto@opencore.cl</a>.</p>
+
+      <h3>2. Datos que recopilamos</h3>
+      <p>Recopilamos unicamente los datos que usted nos proporciona voluntariamente a traves de nuestro formulario de contacto:</p>
+      <ul>
+        <li>Nombre y apellido</li>
+        <li>Direccion de correo electronico</li>
+        <li>Nombre de su empresa</li>
+        <li>Numero de telefono</li>
+        <li>Contenido del mensaje que nos envie</li>
+      </ul>
+
+      <h3>3. Finalidad del tratamiento</h3>
+      <p>Los datos personales recopilados seran utilizados exclusivamente para:</p>
+      <ul>
+        <li>Responder a sus consultas y solicitudes de informacion</li>
+        <li>Evaluar posibles colaboraciones o proyectos</li>
+        <li>Enviar informacion relevante sobre nuestros servicios, solo si usted lo solicita</li>
+        <li>Cumplir con obligaciones legales aplicables</li>
+      </ul>
+
+      <h3>4. Base legal</h3>
+      <p>El tratamiento de sus datos se basa en su consentimiento expreso, otorgado al completar y enviar nuestro formulario de contacto. Usted puede retirar su consentimiento en cualquier momento contactandonos a traves de los medios indicados.</p>
+
+      <h3>5. Conservacion de los datos</h3>
+      <p>Sus datos personales seran conservados durante el tiempo necesario para cumplir con la finalidad para la que fueron recopilados, y seran eliminados cuando ya no sean necesarios o cuando usted solicite su eliminacion.</p>
+
+      <h3>6. Derechos del titular</h3>
+      <p>De acuerdo con la legislacion vigente, usted tiene derecho a:</p>
+      <ul>
+        <li>Acceder a sus datos personales y conocer el tratamiento que se les da</li>
+        <li>Rectificar datos inexactos o incompletos</li>
+        <li>Solicitar la eliminacion de sus datos cuando ya no sean necesarios</li>
+        <li>Oponerse al tratamiento de sus datos en determinadas circunstancias</li>
+        <li>Solicitar la portabilidad de sus datos</li>
+      </ul>
+      <p>Para ejercer estos derechos, envie un correo a <a href="mailto:contacto@opencore.cl">contacto@opencore.cl</a> con el asunto "Derechos de datos personales".</p>
+
+      <h3>7. Seguridad</h3>
+      <p>Implementamos medidas tecnicas y organizativas adecuadas para proteger sus datos personales contra el acceso no autorizado, la perdida, la alteracion o la destruccion. Nuestro sitio web utiliza cifrado SSL/TLS para proteger la transmision de datos.</p>
+
+      <h3>8. Transferencia a terceros</h3>
+      <p>No vendemos, alquilamos ni compartimos sus datos personales con terceros, excepto cuando sea necesario para la prestacion de nuestros servicios (por ejemplo, proveedores de correo electronico) o cuando la ley asi lo requiera. Utilizamos FormSubmit como servicio de procesamiento de formularios, el cual cumple con estandares de seguridad apropiados.</p>
+    </section>
+
+    <!-- ============================== -->
+    <!-- TERMINOS Y CONDICIONES         -->
+    <!-- ============================== -->
+    <section id="terminos" class="legal-section">
+      <span class="legal-badge">Terminos</span>
+      <h2>Terminos y Condiciones de Uso</h2>
+
+      <p>Los presentes Terminos y Condiciones regulan el uso del sitio web de OpenCORE. Al acceder y utilizar este sitio, usted acepta estos terminos en su totalidad. Si no esta de acuerdo con alguna parte, le solicitamos no utilizar el sitio.</p>
+
+      <h3>1. Identificacion</h3>
+      <p>Este sitio web es propiedad y esta operado por OpenCORE, consultora tecnologica con sede en Santiago, Chile, dedicada a la automatizacion empresarial, integracion de sistemas e inteligencia artificial aplicada.</p>
+
+      <h3>2. Uso del sitio</h3>
+      <p>El contenido de este sitio web tiene fines informativos y promocionales. Usted se compromete a:</p>
+      <ul>
+        <li>Utilizar el sitio de manera licita y conforme a estos terminos</li>
+        <li>No intentar acceder de forma no autorizada a areas restringidas del sitio</li>
+        <li>No reproducir, duplicar o explotar comercialmente el contenido sin autorizacion previa</li>
+        <li>No utilizar el formulario de contacto para enviar contenido ilicito, difamatorio o spam</li>
+        <li>No realizar acciones que puedan danar, sobrecargar o deteriorar el funcionamiento del sitio</li>
+      </ul>
+
+      <h3>3. Propiedad intelectual</h3>
+      <p>Todos los contenidos del sitio web, incluyendo pero no limitado a textos, graficos, logotipos, imagenes, diseno, estructura de navegacion y codigo fuente, son propiedad de OpenCORE o de sus respectivos titulares y estan protegidos por las leyes de propiedad intelectual vigentes en Chile y tratados internacionales aplicables.</p>
+
+      <h3>4. Formulario de contacto</h3>
+      <p>Al enviar informacion a traves de nuestro formulario de contacto, usted declara que los datos proporcionados son veridicos y exactos. OpenCORE se reserva el derecho de no responder a mensajes que considere inapropiados, fraudulentos o que no guarden relacion con nuestros servicios.</p>
+
+      <h3>5. Limitacion de responsabilidad</h3>
+      <p>OpenCORE se esfuerza por mantener la informacion del sitio actualizada y precisa, pero no garantiza la exactitud, completitud o vigencia de todo el contenido. En la medida permitida por la ley:</p>
+      <ul>
+        <li>El sitio se proporciona "tal como esta" sin garantias de ningun tipo</li>
+        <li>No nos responsabilizamos por danos directos o indirectos derivados del uso del sitio</li>
+        <li>No garantizamos la disponibilidad continua e ininterrumpida del sitio</li>
+        <li>Los enlaces a sitios de terceros son proporcionados como referencia y no implican respaldo</li>
+      </ul>
+
+      <h3>6. Servicios profesionales</h3>
+      <p>La informacion sobre nuestros servicios publicada en este sitio es de caracter general. Los terminos especificos de cualquier prestacion de servicios seran acordados mediante contrato independiente entre las partes.</p>
+
+      <h3>7. Modificaciones</h3>
+      <p>OpenCORE se reserva el derecho de modificar estos Terminos y Condiciones en cualquier momento. Las modificaciones entraran en vigor desde su publicacion en el sitio web. El uso continuado del sitio despues de la publicacion de cambios constituye la aceptacion de los mismos.</p>
+
+      <h3>8. Legislacion aplicable</h3>
+      <p>Estos terminos se rigen por las leyes de la Republica de Chile. Cualquier controversia sera sometida a los tribunales ordinarios de justicia de la ciudad de Santiago.</p>
+    </section>
+
+    <!-- ============================== -->
+    <!-- POLITICA DE COOKIES            -->
+    <!-- ============================== -->
+    <section id="cookies" class="legal-section">
+      <span class="legal-badge">Cookies</span>
+      <h2>Politica de Cookies</h2>
+
+      <p>Este sitio web utiliza cookies y tecnologias similares para mejorar su experiencia de navegacion. A continuacion le informamos sobre que son las cookies, cuales utilizamos y como puede gestionarlas.</p>
+
+      <h3>1. Que son las cookies</h3>
+      <p>Las cookies son pequenos archivos de texto que se almacenan en su dispositivo (ordenador, tablet o telefono movil) cuando visita un sitio web. Permiten que el sitio recuerde sus acciones y preferencias durante un periodo de tiempo, para que no tenga que volver a configurarlos cada vez que visite el sitio o navegue de una pagina a otra.</p>
+
+      <h3>2. Cookies que utilizamos</h3>
+
+      <h3>Cookies tecnicas (necesarias)</h3>
+      <p>Son esenciales para el funcionamiento basico del sitio. No recopilan informacion personal identificable.</p>
+      <ul>
+        <li>Control de sesion del formulario de contacto</li>
+        <li>Preferencias de visualizacion</li>
+        <li>Estado del envio del formulario</li>
+      </ul>
+
+      <h3>Cookies de rendimiento</h3>
+      <p>Nos ayudan a entender como los visitantes interactuan con el sitio, proporcionando informacion anonima sobre las areas visitadas, el tiempo de navegacion y posibles errores.</p>
+
+      <h3>3. Cookies de terceros</h3>
+      <p>Actualmente nuestro sitio no utiliza cookies de seguimiento de terceros, redes publicitarias ni herramientas de analitica que impliquen la transferencia de datos personales a terceros. En caso de incorporar servicios de terceros en el futuro, esta politica sera actualizada oportunamente.</p>
+
+      <h3>4. Duracion de las cookies</h3>
+      <ul>
+        <li><strong>Cookies de sesion:</strong> Se eliminan automaticamente al cerrar su navegador</li>
+        <li><strong>Cookies persistentes:</strong> Permanecen en su dispositivo durante un periodo determinado o hasta que usted las elimine manualmente</li>
+      </ul>
+
+      <h3>5. Como gestionar las cookies</h3>
+      <p>Usted puede configurar su navegador para bloquear o eliminar cookies en cualquier momento. A continuacion le indicamos como hacerlo en los navegadores mas comunes:</p>
+      <ul>
+        <li><strong>Google Chrome:</strong> Configuracion &gt; Privacidad y seguridad &gt; Cookies</li>
+        <li><strong>Mozilla Firefox:</strong> Opciones &gt; Privacidad &gt; Cookies</li>
+        <li><strong>Safari:</strong> Preferencias &gt; Privacidad &gt; Cookies</li>
+        <li><strong>Microsoft Edge:</strong> Configuracion &gt; Privacidad &gt; Cookies</li>
+      </ul>
+      <p>Tenga en cuenta que deshabilitar las cookies puede afectar la funcionalidad de algunos elementos del sitio.</p>
+
+      <h3>6. Actualizaciones</h3>
+      <p>Esta politica de cookies puede ser actualizada periodicamente para reflejar cambios en nuestras practicas o por motivos legales. La fecha de ultima actualizacion se indica al principio del documento.</p>
+    </section>
+
+    <!-- ============================== -->
+    <!-- AVISO LEGAL                    -->
+    <!-- ============================== -->
+    <section id="aviso-legal" class="legal-section">
+      <span class="legal-badge">Legal</span>
+      <h2>Aviso Legal</h2>
+
+      <h3>1. Datos identificativos</h3>
+      <p>En cumplimiento del deber de informacion, se comunican los siguientes datos:</p>
+      <ul>
+        <li><strong>Razon social:</strong> OpenCORE</li>
+        <li><strong>Actividad:</strong> Consultoria tecnologica, automatizacion empresarial, integracion de sistemas e inteligencia artificial aplicada</li>
+        <li><strong>Domicilio:</strong> Santiago, Chile</li>
+        <li><strong>Correo electronico:</strong> <a href="mailto:contacto@opencore.cl">contacto@opencore.cl</a></li>
+        <li><strong>Sitio web:</strong> opencore.cl</li>
+      </ul>
+
+      <h3>2. Objeto</h3>
+      <p>El presente sitio web tiene como objeto proporcionar informacion sobre los servicios de consultoria tecnologica que ofrece OpenCORE y facilitar un canal de comunicacion con potenciales clientes y colaboradores.</p>
+
+      <h3>3. Propiedad intelectual e industrial</h3>
+      <p>El sitio web, incluyendo a titulo enunciativo pero no limitativo su diseno, textos, graficos, logotipos, iconos, imagenes, codigo fuente y software, es propiedad de OpenCORE o de terceros que han autorizado su uso, y esta protegido por la legislacion chilena e internacional sobre propiedad intelectual e industrial.</p>
+      <p>Queda expresamente prohibida la reproduccion total o parcial de este sitio web, ni siquiera mediante un hipervinculo, sin el consentimiento expreso y por escrito de OpenCORE.</p>
+
+      <h3>4. Exclusion de garantias y responsabilidad</h3>
+      <p>OpenCORE no se hace responsable, en ningun caso, de los danos y perjuicios de cualquier naturaleza que pudieran derivarse de:</p>
+      <ul>
+        <li>La falta de disponibilidad o accesibilidad al sitio web</li>
+        <li>La interrupcion del funcionamiento del sitio o fallos informaticos</li>
+        <li>La presencia de virus o programas maliciosos en los contenidos</li>
+        <li>El uso ilicito, negligente o fraudulento del sitio por parte de los usuarios</li>
+        <li>La falta de veracidad, exactitud, exhaustividad y/o actualidad de los contenidos</li>
+      </ul>
+
+      <h3>5. Enlaces a terceros</h3>
+      <p>Este sitio web puede contener enlaces a sitios de terceros (redes sociales, servicios complementarios, etc.). OpenCORE no asume responsabilidad alguna por el contenido, politicas de privacidad o practicas de dichos sitios externos. El acceso a los mismos se realiza bajo la exclusiva responsabilidad del usuario.</p>
+
+      <h3>6. Confidencialidad</h3>
+      <p>Toda la informacion que nos proporcione en el marco de una consulta o propuesta de proyecto sera tratada con estricta confidencialidad. No divulgaremos informacion sobre su empresa, proyectos o necesidades sin su consentimiento expreso.</p>
+
+      <h3>7. Legislacion y jurisdiccion</h3>
+      <p>El presente aviso legal se rige en todos sus extremos por la legislacion chilena. Para la resolucion de cualquier controversia que pudiera surgir, las partes se someten a la jurisdiccion de los Juzgados y Tribunales de la ciudad de Santiago, Chile, renunciando expresamente a cualquier otro fuero que pudiera corresponderles.</p>
+
+      <h3>8. Contacto</h3>
+      <p>Para cualquier consulta relacionada con este aviso legal o cualquier aspecto del sitio web, puede contactarnos en:</p>
+      <ul>
+        <li><strong>Email:</strong> <a href="mailto:contacto@opencore.cl">contacto@opencore.cl</a></li>
+        <li><strong>Telefono:</strong> <a href="tel:+56949587198">+56 9 4958 7198</a></li>
+      </ul>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer class="legal-footer">
+    <p>&copy; 2026 OpenCORE. Todos los derechos reservados. | <a href="index.html">Volver al inicio</a></p>
+  </footer>
+
+  <!-- Active nav highlight on scroll -->
+  <script>
+    const navLinks = document.querySelectorAll('.legal-nav a');
+    const sections = document.querySelectorAll('.legal-section');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(l => l.classList.remove('active'));
+          const id = entry.target.getAttribute('id');
+          const link = document.querySelector('.legal-nav a[href="#' + id + '"]');
+          if (link) link.classList.add('active');
+        }
+      });
+    }, { threshold: 0.2, rootMargin: '-80px 0px -60% 0px' });
+
+    sections.forEach(s => observer.observe(s));
+  </script>
+</body>
+</html>
