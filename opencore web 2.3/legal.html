@@ -13,81 +13,169 @@
 
     :root {
       --c-primary: #1E5FAD;
-      --c-primary-dark: #164785;
+      --c-primary-dark: #133D70;
       --c-primary-light: #3B82F6;
-      --c-accent: #7C5CE7;
+      --c-accent: #6D28D9;
+      --c-accent-dark: #5B21B6;
+      --c-accent-light: #8B5CF6;
       --c-white: #ffffff;
-      --c-gray-50: #f9fafb;
-      --c-gray-100: #f3f4f6;
-      --c-gray-200: #e5e7eb;
-      --c-gray-500: #6b7280;
-      --c-gray-700: #374151;
-      --c-gray-900: #111827;
+      --c-gray-50: #f8fafc;
+      --c-gray-100: #f1f5f9;
+      --c-gray-200: #e2e8f0;
+      --c-gray-300: #cbd5e1;
+      --c-gray-500: #64748b;
+      --c-gray-700: #334155;
+      --c-gray-900: #0f172a;
     }
 
     html { scroll-behavior: smooth; scroll-padding-top: 80px; }
 
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+    }
+
     body {
       font-family: 'Inter', system-ui, -apple-system, sans-serif;
-      background: var(--c-white);
+      background: var(--c-gray-50);
       color: var(--c-gray-700);
       line-height: 1.7;
       -webkit-font-smoothing: antialiased;
     }
 
-    a { color: var(--c-primary); text-decoration: none; transition: color 0.3s ease; }
+    a { color: var(--c-primary); text-decoration: none; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
     a:hover { color: var(--c-accent); }
 
-    /* Header */
+    /* ============================================
+       HEADER - Premium Dark with Mesh Gradient
+       ============================================ */
     .legal-header {
-      background: linear-gradient(135deg, var(--c-primary) 0%, var(--c-primary-dark) 100%);
+      background: linear-gradient(135deg, var(--c-gray-900) 0%, #1a2332 40%, var(--c-primary-dark) 100%);
       padding: 40px 24px 48px;
       text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 100;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Mesh gradient orbs */
+    .legal-header::before {
+      content: '';
+      position: absolute;
+      top: -30%;
+      right: -10%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(109, 40, 217, 0.15) 0%, transparent 70%);
+      border-radius: 50%;
+      animation: headerOrb1 8s ease-in-out infinite;
+    }
+
+    .legal-header::after {
+      content: '';
+      position: absolute;
+      bottom: -40%;
+      left: -5%;
+      width: 350px;
+      height: 350px;
+      background: radial-gradient(circle, rgba(59, 130, 246, 0.12) 0%, transparent 70%);
+      border-radius: 50%;
+      animation: headerOrb2 10s ease-in-out infinite;
+    }
+
+    @keyframes headerOrb1 {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      50% { transform: translate(-20px, 15px) scale(1.1); }
+    }
+
+    @keyframes headerOrb2 {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      50% { transform: translate(15px, -10px) scale(1.08); }
     }
 
     .legal-header-inner {
       max-width: 900px;
       margin: 0 auto;
+      position: relative;
+      z-index: 2;
     }
 
     .legal-back {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      color: rgba(255,255,255,0.8);
+      color: rgba(255,255,255,0.7);
       font-size: 0.9rem;
       font-weight: 500;
       margin-bottom: 20px;
-      transition: color 0.3s ease;
+      padding: 6px 14px;
+      border-radius: 50px;
+      border: 1px solid rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
     }
 
-    .legal-back:hover { color: white; }
+    .legal-back:hover {
+      color: white;
+      border-color: rgba(255,255,255,0.3);
+      background: rgba(255,255,255,0.08);
+      transform: translateX(-4px);
+    }
 
     .legal-header h1 {
       font-size: clamp(1.8rem, 4vw, 2.5rem);
       font-weight: 800;
-      color: white;
+      background: linear-gradient(135deg, #ffffff 0%, rgba(139, 92, 246, 0.9) 50%, #ffffff 100%);
+      background-size: 200% 200%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: headerGradient 5s ease infinite;
       letter-spacing: -0.02em;
       margin-bottom: 8px;
     }
 
-    .legal-header p {
-      color: rgba(255,255,255,0.7);
-      font-size: 0.95rem;
+    @keyframes headerGradient {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
     }
 
-    /* Navigation tabs */
+    .legal-header p {
+      color: rgba(255,255,255,0.5);
+      font-size: 0.9rem;
+      letter-spacing: 0.02em;
+    }
+
+    /* Shimmer line under header */
+    .legal-header-line {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--c-primary-light), var(--c-accent-light), transparent);
+      background-size: 200% 100%;
+      animation: shimmerLine 4s ease infinite;
+    }
+
+    @keyframes shimmerLine {
+      0%, 100% { background-position: -200% 0; }
+      50% { background-position: 200% 0; }
+    }
+
+    /* ============================================
+       NAVIGATION TABS - Glass Style
+       ============================================ */
     .legal-nav {
-      background: var(--c-white);
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
       border-bottom: 1px solid var(--c-gray-200);
       position: sticky;
       top: 0;
       z-index: 99;
       overflow-x: auto;
       -webkit-overflow-scrolling: touch;
+      box-shadow: 0 1px 8px rgba(0, 0, 0, 0.04);
     }
 
     .legal-nav-inner {
@@ -106,15 +194,21 @@
       white-space: nowrap;
       border-bottom: 2px solid transparent;
       transition: all 0.3s ease;
+      position: relative;
     }
 
-    .legal-nav a:hover,
+    .legal-nav a:hover {
+      color: var(--c-accent);
+    }
+
     .legal-nav a.active {
-      color: var(--c-primary);
-      border-bottom-color: var(--c-primary);
+      color: var(--c-accent);
+      border-bottom-color: var(--c-accent);
     }
 
-    /* Content */
+    /* ============================================
+       CONTENT AREA
+       ============================================ */
     .legal-content {
       max-width: 900px;
       margin: 0 auto;
@@ -123,7 +217,13 @@
 
     .legal-section {
       padding: 60px 0 40px;
-      border-bottom: 1px solid var(--c-gray-100);
+      border-bottom: 1px solid var(--c-gray-200);
+      animation: sectionFadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+
+    @keyframes sectionFadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     .legal-section:last-child { border-bottom: none; }
@@ -134,6 +234,19 @@
       color: var(--c-gray-900);
       margin-bottom: 24px;
       letter-spacing: -0.02em;
+      position: relative;
+      padding-left: 16px;
+    }
+
+    .legal-section h2::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 4px;
+      bottom: 4px;
+      width: 3px;
+      background: linear-gradient(180deg, var(--c-primary), var(--c-accent));
+      border-radius: 2px;
     }
 
     .legal-section h3 {
@@ -169,39 +282,55 @@
       top: 10px;
       width: 6px;
       height: 6px;
-      background: var(--c-primary);
+      background: linear-gradient(135deg, var(--c-primary), var(--c-accent));
       border-radius: 50%;
     }
 
     .legal-badge {
       display: inline-block;
-      padding: 4px 12px;
-      background: rgba(30, 95, 173, 0.08);
-      color: var(--c-primary);
+      padding: 5px 14px;
+      background: linear-gradient(135deg, rgba(30, 95, 173, 0.08), rgba(109, 40, 217, 0.08));
+      color: var(--c-accent);
       font-size: 0.75rem;
       font-weight: 700;
       border-radius: 50px;
       text-transform: uppercase;
       letter-spacing: 0.05em;
       margin-bottom: 16px;
+      border: 1px solid rgba(109, 40, 217, 0.1);
     }
 
-    /* Footer */
+    /* ============================================
+       FOOTER - Premium Dark
+       ============================================ */
     .legal-footer {
-      background: var(--c-gray-50);
-      border-top: 1px solid var(--c-gray-200);
+      background: linear-gradient(135deg, var(--c-gray-900) 0%, #1a2332 100%);
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
       padding: 32px 24px;
       text-align: center;
     }
 
     .legal-footer p {
       font-size: 0.85rem;
-      color: var(--c-gray-500);
+      color: rgba(255, 255, 255, 0.5);
     }
 
-    /* Responsive */
+    .legal-footer a {
+      color: rgba(255, 255, 255, 0.7);
+      transition: color 0.3s ease;
+    }
+
+    .legal-footer a:hover {
+      color: var(--c-accent-light);
+    }
+
+    /* ============================================
+       RESPONSIVE
+       ============================================ */
     @media (max-width: 768px) {
       .legal-header { padding: 28px 20px 36px; }
+      .legal-header::before { width: 250px; height: 250px; }
+      .legal-header::after { width: 200px; height: 200px; }
       .legal-section { padding: 40px 0 28px; }
       .legal-section h2 { font-size: 1.35rem; }
       .legal-nav a { padding: 14px 16px; font-size: 0.8rem; }
@@ -211,6 +340,10 @@
     ::-webkit-scrollbar { width: 8px; }
     ::-webkit-scrollbar-track { background: var(--c-gray-100); }
     ::-webkit-scrollbar-thumb { background: linear-gradient(180deg, var(--c-primary), var(--c-accent)); border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: linear-gradient(180deg, var(--c-primary-dark), var(--c-accent-dark)); }
+
+    /* Selection */
+    ::selection { background: rgba(109, 40, 217, 0.15); color: var(--c-gray-900); }
   </style>
 </head>
 <body>
@@ -221,6 +354,7 @@
       <h1>Informacion Legal</h1>
       <p>Ultima actualizacion: Febrero 2026</p>
     </div>
+    <div class="legal-header-line"></div>
   </header>
 
   <!-- Navigation -->
